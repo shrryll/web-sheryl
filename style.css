@@ -4,9 +4,9 @@ body {
     background-color: #f6f0ff;
 }
 
-/* Navbar */
+
 .navbar {
-    background: #5e4b8b; /* ungu gelap pastel */
+    background: #5e4b8b; 
     padding: 8px 18px;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Logo */
+
 .logo {
     color: white;
     margin: 0;
@@ -22,13 +22,13 @@ body {
     font-weight: 600;
 }
 
-/* Links container */
+
 .nav-links {
     display: flex;
     gap: 18px;
 }
 
-/* Link style */
+
 .nav-links a {
     text-decoration: none;
     color: #f3e8ff;
@@ -41,13 +41,13 @@ body {
     gap: 6px;
 }
 
-/* Hover effect */
+
 .nav-links a:hover {
     background-color: #7d6aad;
     transform: scale(1.05);
 }
 
-/* Order button special */
+
 .order-btn {
     background-color: #d6b4ff;
     color: #4a3b6f;
@@ -58,7 +58,6 @@ body {
     background-color: #c095ff;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -70,4 +69,5 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+
 }
