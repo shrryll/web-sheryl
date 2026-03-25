@@ -4,7 +4,6 @@ body {
     background: url("soda.png") center/cover no-repeat fixed;
 }
 
-/* NAVBAR */
 .navbar {
     background: #5e4b8b;
     padding: 8px 18px;
@@ -33,7 +32,7 @@ body {
     height: 30px;
 }
 
-/* NAV LINKS */
+
 .nav-links {
     display: flex;
     gap: 18px;
@@ -56,7 +55,7 @@ body {
     transform: scale(1.05);
 }
 
-/* HERO */
+
 .hero {
     height: 90vh;
     display: flex;
@@ -71,7 +70,7 @@ body {
     font-size: 48px;
 }
 
-/* CONTENT */
+
 .content {
     padding: 80px 10%;
     background: rgba(255,255,255,0.85);
@@ -89,7 +88,7 @@ body {
     color: #4a3b6f;
 }
 
-/* PROFILE */
+
 .profile-card {
     display: flex;
     align-items: center;
@@ -127,7 +126,7 @@ body {
     font-size: 18px;
 }
 
-/* SOCIAL BUTTONS */
+
 .social-buttons {
     margin-top: 15px;
     display: flex;
@@ -156,7 +155,7 @@ body {
     opacity: 0.85;
 }
 
-/* GALLERY */
+
 .gallery-container {
     display: flex;
     gap: 20px;
@@ -176,7 +175,6 @@ body {
     transform: scale(1.05);
 }
 
-/* DARK GRADIENT BAWAH */
 body::after {
     content: "";
     position: fixed;
@@ -196,7 +194,7 @@ body::after {
     z-index: -1;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 768px) {
 
     .navbar {
