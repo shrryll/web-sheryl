@@ -1,13 +1,12 @@
 body {
     margin: 0;
     font-family: 'Fredoka', sans-serif;
-    background-color: #f6f0ff; 
-    background-image:url("soda.png");
+    background: url("soda.png") center/cover no-repeat fixed;
 }
 
-
+/* NAVBAR */
 .navbar {
-    background: #5e4b8b; 
+    background: #5e4b8b;
     padding: 8px 18px;
     display: flex;
     justify-content: space-between;
@@ -19,20 +18,26 @@ body {
     z-index: 1000;
 }
 
-
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     color: white;
     margin: 0;
     font-size: 22px;
     font-weight: 600;
 }
 
+.logo-img {
+    height: 30px;
+}
 
+/* NAV LINKS */
 .nav-links {
     display: flex;
     gap: 18px;
 }
-
 
 .nav-links a {
     text-decoration: none;
@@ -40,30 +45,160 @@ body {
     font-weight: 500;
     padding: 8px 14px;
     border-radius: 20px;
-    transition: 0.3s ease;
+    transition: 0.3s;
     display: flex;
     align-items: center;
     gap: 6px;
 }
-
 
 .nav-links a:hover {
     background-color: #7d6aad;
     transform: scale(1.05);
 }
 
+/* HERO */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 8%;
+    color: #3b1a5a;
+}
 
-.fas fa-user {
-    background-color: #d6b4ff;
+.hero h1 {
+    font-size: 48px;
+}
+
+/* CONTENT */
+.content {
+    padding: 80px 10%;
+    background: rgba(255,255,255,0.85);
+    margin: 40px;
+    border-radius: 15px;
+}
+
+.content h2 {
+    color: #5e2ca5;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1.8;
     color: #4a3b6f;
-    font-weight: 600;
 }
 
-.fas fa-user:hover {
-    background-color: #c095ff;
+/* PROFILE */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 15px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 20px;
+
+    transition: 0.3s;
 }
 
+.profile-card:hover {
+    transform: scale(1.02);
+}
+
+.profile-img {
+    width: 200px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-text h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #5e2ca5;
+}
+
+.profile-text p {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+/* SOCIAL BUTTONS */
+.social-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.social-buttons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-buttons .ig { background: #e1306c; }
+.social-buttons .wa { background: #25D366; }
+.social-buttons .tt { background: #000; }
+
+.social-buttons a:hover {
+    transform: scale(1.15);
+    opacity: 0.85;
+}
+
+/* GALLERY */
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-container img {
+    width: 250px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* DARK GRADIENT BAWAH */
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.4),
+        rgba(0,0,0,0)
+    );
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
@@ -75,75 +210,12 @@ body {
         gap: 10px;
     }
 
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-img {
+        width: 100%;
+    }
 }
-
-.hero{
-    height: 90vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; 
-
-    padding-left: 8%; 
-    padding-right: 8%;
-
-    color: #3b1a5a;
-    text-align: left;
-}
-
-.hero h1{
-    font-size: 48px;
-}
-
-.content{
-    padding: 80px 10%;
-    background: rgba(255,255,255,0.85);
-    margin: 40px;
-    border-radius: 15px;
-}
-
-.content h2{
-    color: #5e2ca5;
-}
-
-body{
-    margin:0;
-    font-family: 'Fredoka', sans-serif;
-
-    background: url("soda.png") center/cover no-repeat fixed;
-}
-
-body::after{
-    content:"";
-    position:fixed;
-    bottom:0;
-    left:0;
-
-    width:100%;
-    height:60vh;
-
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.85),
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0)
-    );
-
-    pointer-events:none;
-    z-index:-1;
-}
-
-.header{
-    background-color: #d6b4ff;
-    padding: 10px 1%;
-
-    display: flex;
-    justify-content: left;
-    align-items: left;
-}
-
-
-
-
-
